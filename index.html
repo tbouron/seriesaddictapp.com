@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>SeriesAddict - Fill up series</title>
+		
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="font/font.css" rel="stylesheet" media="screen">
+		<link href="css/style.css" rel="stylesheet" media="screen">
+	</head>
+	
+	<body id="body" data-spy="scroll" data-target=".navbar">
+		<!-- Navigation bar -->
+		<div class="navbar navbar-fixed-top navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="#">SeriesAddict - Fill up series</a>
+					<ul class="nav pull-right">
+						<li><a href="#features" class="scroller" data-section="#features">Fonctionnalités</a></li>
+						<li><a href="#screenshots" class="scroller" data-section="#screenshots">Captures d'écran</a></li>
+						<li><a href="#footer" class="scroller" data-section="#footer">A propos</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Support <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="http://www.betaseries.com/bugs/seriesaddict">Bugtracker</a></li>
+								<li><a href="./faq.html">FAQ</a></li>
+								<li><a href="mailto:seriesaddictapp@gmail.com">Contact</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Top -->
+		<div id="top">
+			<div class="container">
+				<div class="row">
+					<div class="span4 offset1">
+						<img src="img/logo.png" alt="Logo SeriesAddict" />
+					</div>
+					<div class="span6">
+						<h1>Regardez</h1>
+						<h2>Et profitez tout simplement!</h2>
+						<p class="justify">Avec l’application SeriesAddict, le planning entier de diffusion de vos prochaines séries est disponible sur votre téléphone / tablette, à porté de doigts. Ajoutez vos séries TV, vérifiez votre planning, marquez les épisodes comme vu... Bref, profitez et laissez SeriesAddict s’occuper du reste!</p>
+					</div>
+				</div>
+				<div id="actions" class="row">
+					<div class="span3 offset2">
+						<a id="show-video" href="http://www.youtube.com/watch?v=VZ8pCC02emk" class="btn btn-large btn-block" data-toggle="modal" data-target="#modal">
+							<img src="img/play.png" alt="Ouvrir la vidéo" />
+							Voir la vidéo
+						</a>
+					</div>
+					<div class="span5">
+						<a href="https://play.google.com/store/apps/details?id=com.zenstyle.seriesaddict" class="btn btn-large btn-block btn-success">
+							<img src="img/googleplay.png" alt="Google Play Store" />
+							Télécharger sur Google Play™
+						</a>
+					</div>
+				</div>
+				<div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3>Vidéo de présentation</h3>
+					</div>
+					<iframe width="560" height="315" src="http://www.youtube.com/embed/VZ8pCC02emk" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		
+		<div id="content">
+			<div class="container">
+				<!-- Features -->
+				<div id="features" class="clearfix">
+					<div class="row">
+						<h2 class="span12 section"><span>Fonctionnalités</span></h2>
+					</div>
+					<div class="row">
+						<div class="span12">
+							<ul class="thumbnails">
+								<li class="span4">
+									<img src="img/adding.png" class="img-circle" alt="Ajouter vos séries préférées" />
+									<h4>Ajouter vos séries préférées</h4>
+									<p class="muted justify">Cherchez, trouvez la série qui vous fait vibrer et ajoutez la à votre compte d'un simple "tap" du doigt! Vous aurez alors automatiquement accès à son planning.</p>
+								</li>
+								<li class="span4">
+									<img src="img/tracking.png" class="img-circle" alt="Regarder et checker" />
+									<h4>Regarder et checker</h4>
+									<p class="muted justify">Regardez vos épisodes et marquez les comme vu ce au fur et à mesure. Votre progression est alors sauvegardée par l'application. Fini les post-it ou feuilles volantes!</p>
+								</li>
+								<li class="span4">
+									<img src="img/planning.png" class="img-circle" alt="Planning personnalisé" />
+									<h4>Planning personnalisé</h4>
+									<p class="muted justify">Avec SeriesAddict, vous avez accès à votre planning personnalisé des prochains épisodes qui vont sortir sur une période de 6 mois. Plus aucun ne vous échappera désormais!</p>
+								</li>
+								<li class="span4">
+									<img src="img/notifications.png" class="img-circle" alt="Notifications Android" />
+									<h4>Notifications Android</h4>
+									<p class="muted justify">Un planning c'est bien, mais SerieAddict offre également des notifications à intervalle régulier: Nouveaux épisodes, commentaires, badges gagnés, nouvelles demandes d'amis, etc.</p>
+								</li>
+								<li class="span4">
+									<img src="img/progress.png" class="img-circle" alt="Statistiques de progression" />
+									<h4>Statistiques de progression</h4>
+									<p class="muted justify">Nombre d'épisodes / saison vus, temps passé devant la TV, temps restant... Toutes ces informations à vous faire tourner la tête sont disponibles sur votre profil complet.</p>
+								</li>
+								<li class="span4">
+									<img src="img/community.png" class="img-circle" alt="Communauté" />
+									<h4>Communauté</h4>
+									<p class="muted justify">Profitez de toute la communauté des membres de <a href="http://www.betaseries.com">BetaSeries</a> pour échanger au travers des commentaires de séries / épisodes, notation, demandes d'amitiés, forum, etc.</p>
+								</li>
+								<li class="span4">
+									<img src="img/premium.png" class="img-circle" alt="Fonctionalités Premium" />
+									<h4>Fonctionnalités Premium</h4>
+									<p class="muted justify">Nouvelles séries qui vont sortir, liste des personnages d'une séries, vidéos associées, messages privées, etc. Ayez accès à tout cela <strong>pour seulement 0.99€</strong></p>
+								</li>
+								<li class="span4">
+									<img src="img/discover.png" class="img-circle" alt="Et bien plus..." />
+									<h4>Et bien plus...</h4>
+									<p class="muted justify">Retrouvez toutes les fonctionnalités offertes par <a href="http://www.betaseries.com">BetaSeries</a> directement sur votre téléphone / tablette.</p>
+									<p><a href="https://play.google.com/store/apps/details?id=com.zenstyle.seriesaddict" class="btn btn-success">Essayez la!</a></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Screenshots -->
+				<div id="screenshots" class="clearfix">
+					<div class="row">
+						<h2 class="span12 section"><span>Captures d'écran</span></h2>
+					</div>
+					<div class="row">
+						<div id="device-carousel" class="carousel slide span4">
+							<!-- Carousel items -->
+							<div class="carousel-inner">
+								<div class="active item">
+									<img src="img/carousel/signin.png" alt="Utilisation de votre compte BetaSeries" />
+									<p>SeriesAddict se base sur <a href="http://www.betaseries.com">BetaSeries</a> pour garder toutes les informations à propos du suivi de vos séries. Un compte est donc nécessaire à l'utilisation de l'application. Si vous n'en avez pas un, pas panique, SeriesAddict vous propose de le créer directement en 30 secondes chrono!</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/signup.png" alt="Création de compte BetaSeries" />
+									<p>Si vous n'avez pas de compte <a href="http://www.betaseries.com">BetaSeries</a>, il vous suffira de remplir se formulaire pour en créer un directement depuis l'application. La création ne prend que quelques secondes et aucun email publicitaire ne vous sera envoyé par la suite! Une fois le compte créé, vous pourrez commencer à suivre l'avancement dans le visionnage de vos séries.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/shows.png" alt="Séries suivies" />
+									<p>Vous retrouverez sur cet écran toutes les séries que vous avez ajouté à votre compte. Il vous est possible de les archivées / désarchivées ainsi que de les trier par noms. Vous souhaitez avoir plus d'information sur une de ces séries? Un simple "tap" vous amènera sur sa fiche détaillée.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/show.png" alt="Fiche série détaillée" />
+									<p>Toutes les informations à propos d'une série sont affichées ici: Statut de la série, temps moyen d'un épisode, synopsis, chaîne de diffusion ainsi que le(s) thème(s) classés par catégorie. Les fiches séries permettent également d'accéder aux commentaires, épisodes et autres d'un simple glissement de doigt à gauche ou droite.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/show-episodes.png" alt="Épisodes d'une série" />
+									<p>Chaque fiche série dispose de la liste de tous les épisodes diffusés. Elle vous permet de suivre votre progression ainsi que d'accéder à la fiche détaillée d'un épisode, de les marquer comme vu ou téléchargés et de les noter.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/show-characters.png" alt="Personnages d'une série" />
+									<p><span class="label label-info">Premium</span> En plus des informations générales de chaque série, vous avez accès à la liste des personnages qui jouent un rôle dans celles-ci ainsi qu'à un certain nombre d'informations comme une description / type de rôle que le l'acteur interprète.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/show-comments.png" alt="Commentaires sur la série" />
+									<p>À partir de cet écran, vous pouvez voir les commentaires que les autres membres de <a href="http://www.betaseries.com">BetaSeries</a> ont laissé à propos de la série. Vous pouvez également répondre aux commentaires déjà postés ou en créer un nouveau.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/show-similar.png" alt="Séries similaries" />
+									<p><span class="label label-info">Premium</span> Vous avez aimé une série et vous aimeriez en trouver d'autre dans la veine? Cet écran est fait pour vous. Chaque fiche série dispose d'une liste de de séries similaires se basant sur la catégorie de la série et des suggestions faites par les membres membres de <a href="http://www.betaseries.com">BetaSeries</a>.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/episodes.png" alt="Épisodes restant à voir" />
+									<p>Cet écran vous affichera, en fonction des séries qui sont ajoutées à votre compte, la liste des épisodes qu'il vous reste à voir. Cette liste est bien évidemment mise à jour lorsqu'un nouvel épisode est disponible.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/episode.png" alt="Fiche épisode détaillée" />
+									<p>Toutes les informations à propos d'un épisode sont affichées ici: Titre, synopsis, date de diffusion originale, numéro d'épisode / saison, langues des sous-titre disponible, note moyenne donnée par les membres de <a href="http://www.betaseries.com">BetaSeries</a>. Les fiches épisode permettent également d'accéder aux commentaires, sous-titres et autres d'un simple glissement de doigt à gauche ou droite.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/episode-subtitles.png" alt="Sous-titres disponibles" />
+									<p><a href="http://www.betaseries.com">BetaSeries</a> utilise plusieurs sources afin de proposer à ses membres des sous-titres lors de la sortie d'un épisode. Cette écran regroupe tous les sous-titres disponibles classés par source / langue / qualité. Vous pouvez télécharger directement les fichiers depuis cet écran sur votre téléphone / tablette.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/planning.png" alt="Planning des prochains épisodes à voir" />
+									<p>Cet écran vous permet de visualiser d'un seul coup d'oeil, les épisodes disponible de 7 jours avant la date actuelle jusqu'à 6 mois. Les mêmes actions que pour l'écran <em>"Épisode restant à voir"</em> sont accessibles ici.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/feeds.png" alt="Flux d'actualités" />
+									<p>Qu'est-ce que vos amis ont récemment regardé? Quelle séries suivent-il? Vous avez accès à ces informations depuis cet écran <em>(suivant les paramètres de confidentialité définis de vos amis et membres de BetaSeries)</em>.</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/profile.png" alt="Profil utilisateur" />
+									<p>Chaque membre de <a href="http://www.betaseries.com">BetaSeries</a> dispose d'un profil complet que vous pouvez consulter <em>(suivant les paramètres de confidentialité définis)</em> incluant des statistiques sur votre consommation de Séries. Attention à l'overdose! ;)</p>
+								</div>
+								<div class="item">
+									<img src="img/carousel/badges.png" alt="Badges à collectioner" />
+									<p>En fonction de vos actions, vous pouvez gagner des badges. Un moyen ludique pour vous amusez avec vos amis <a href="http://www.betaseries.com">BetaSeries</a> tout en assouvissant votre passion pour les séries!</p>
+								</div>
+							</div>
+						</div>
+						<div id="carousel-caption" class="span8">
+							<h3></h3>
+							<p class="justify"></p>
+						</div>
+						<div id="carousel-nav" class="span8">
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="span5">
+						<h3>Soyez à jour</h3>
+						<p>SeriesAddict écoute ses utilisateurs et évolue en fonction d'eux. Rejoignez maintenant les pages Facebook, Twitter et Google+ pour vous tenir au courant des dernières informations!</p>
+						<p>
+							<a href="https://twitter.com/SeriesAddictApp"><img src="img/twitter.png" class="img-circle twitter" alt="Twitter" /></a>
+							<a href="https://www.facebook.com/SeriesAddictApp"><img src="img/facebook.png" class="img-circle facebook" alt="Facebook" /></a>
+							<a href="https://plus.google.com/u/0/107424849690735959465"><img src="img/gplus.png" class="img-circle gplus" alt="Google+" /></a>
+						</p>
+					</div>
+					<div class="span6 offset1">
+						<h3>A propos</h3>
+						<p>SeriesAddict a été développé par Thomas Bouron (<a href="mailto:seriesaddictapp@gmail.com">@</a>). L'application est gratuite et inclue un "Feature pack" qu'il est possible d'acheter pour 0,99€. SeriesAddict utilise les données de <a href="http://www.betaseries.com">BetaSeries</a> ainsi que les librairies suivantes sous la licence Apache v2:
+							<ul><li><a href="http://actionbarsherlock.com/">ActionBarSherlock</a> de Jake Wharton</li>
+							<li><a href="http://viewpagerindicator.com/">ViewPagerIndictator</a> de Jake Wharton</li> 
+							<li><a href="https://github.com/chrisbanes/Android-PullToRefresh">PullToRefresh</a> de Chris Banes</li></ul>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="brand" href="#">© 2012 Thomas Bouron</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/home.js"></script>
+	</body>
+</html>
