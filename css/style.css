@@ -235,6 +235,9 @@ h2.section span {
 	.navbar-fixed-top {
 		margin: 0;
 	}
+	.nav-collapse .dropdown-menu {
+		padding-left: 15px;
+	}
 	
 	#top {
 		padding: 20px;
