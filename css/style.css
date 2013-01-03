@@ -166,14 +166,12 @@ h2.section span {
 }
 #carousel-nav p a {
 	text-indent: -1000px;
-	background: transparent url(../img/carousel/nav.png) no-repeat left top;
-	font-size: 18px;
+	background: transparent url(../img/carousel/nav.png) no-repeat left -1px;
 	padding: 0 12px 0 12px;
-	width: 20px;
-	height: 20px;
+	font-size: 16px;
 }
 #carousel-nav p a:hover, #carousel-nav p a.active {
-	background-position: 0 100%;
+	background-position: 0px -21px;
 }
 
 /* --------------------------------------------- */
