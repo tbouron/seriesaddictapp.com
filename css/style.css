@@ -208,6 +208,9 @@ h2.section span {
 	color: #669900;
 }
 
+#footer .navbar {
+	margin-bottom: 0;
+}
 #footer .navbar a {
 	font-size: 14px;
 }
