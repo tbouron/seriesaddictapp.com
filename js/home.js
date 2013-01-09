@@ -36,6 +36,9 @@ $(function() {
 		return false;
 	});
 	
+	// Init tooltips
+	$('[rel=tooltip]').tooltip();
+	
 	function carouselSlideIn() {
 		var selector = $('#carousel-nav p a').get($('#device-carousel div.active').index());
 		$('#carousel-nav p a').removeClass('active');
