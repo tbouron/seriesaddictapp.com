@@ -115,8 +115,8 @@ h2.section span {
 	text-align: justify;
 }
 #features li img {
-	width: 45px;
-	height: 45px;
+	width: 50px;
+	height: 50px;
 	padding: 25px;
 	background: #eee;
 	box-shadow: 0px 3px 8px 0px #999;
@@ -141,8 +141,12 @@ h2.section span {
 	width: 253px;
 	height: 421px;
 }
-#device-carousel div.item p{
-	display: none;
+#device-carousel div.item p {
+	background: #000;
+	opacity: 0.9;
+	color: #fff;
+	padding: 10px;
+	/*display: none;*/
 }
 
 #carousel-caption {
@@ -180,7 +184,8 @@ h2.section span {
 	padding-top: 100px;
 }
 #faq h3 {
-	font-style: italic;
+	font-size: 20px;
+	text-transform:uppercase;
 }
 
 /* --------------------------------------------- */
@@ -233,6 +238,35 @@ h2.section span {
 	#top #actions a {
 		margin-top: 20px;
 	}
+	
+	#device-carousel {
+		background: none;
+		width: inherit;
+		height: inherit;
+	}
+	#device-carousel .carousel-inner {
+		margin: 0 auto;
+	}
+	#device-carousel div.item img {
+		position: relative;
+	}
+	#device-carousel div.item p {
+		position: absolute;
+		bottom: 0;
+		margin: 0;
+	}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+	#carousel-caption {
+		display: table;
+		height: 340px;
+		padding-top: 70px;
+	}
+	#carousel-caption h3{
+		font-size: 30px;
+	}
+	.divinner {display:table-cell; vertical-align:middle;}
+	
 }
 @media (max-width: 979px) {
 	.navbar-fixed-top {
@@ -244,5 +278,9 @@ h2.section span {
 	
 	#top {
 		padding: 20px;
+	}
+	
+	#device-carousel div.item p {
+		display: none;
 	}
 }
