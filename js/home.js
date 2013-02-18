@@ -20,6 +20,9 @@ $(function() {
 			var a = $('<a>').attr('href', '#').click(function(e) {
 				$('.carousel').carousel(index); 
 				e.preventDefault();
+			}).tooltip({
+				placement: 'bottom',
+				title: $(this).find('img').attr('alt')
 			});
 			if ($(this).hasClass('active')) {
 				a.addClass('active');
