@@ -179,11 +179,11 @@ h2.section span {
 }
 
 /* --------------------------------------------- */
-/* FAQ */
-#faq {
+/* FAQ & Changelog */
+#faq, #changelog {
 	padding-top: 100px;
 }
-#faq h3 {
+#faq h3, #changelog h3 {
 	font-size: 20px;
 	text-transform:uppercase;
 }

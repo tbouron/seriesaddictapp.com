@@ -77,20 +77,6 @@ $(function() {
 		$('.carousel').bind('slid', function() {
 			carouselSlideIn();
 		});
-		/*
-		if ($('#carousel-caption').is(':hidden')) {
-			$('#device-carousel').hover(
-				function () {
-					console.log('hover');
-					$('#device-carousel div.active p').slideToggle("slow");
-				},
-				function () {
-					console.log('bye');
-					$('#device-carousel div.active p').slideToggle("slow");
-				}
-			);
-		}
-		*/
 		
 		// Init carousel first caption
 		carouselSlideIn();
