@@ -98,6 +98,10 @@ h2.section span {
 #top #actions {
 	padding: 40px 0 40px 0;
 }
+#top #donate {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
 
 #top iframe {
 	border: none;
