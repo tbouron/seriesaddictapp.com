@@ -3,6 +3,17 @@ $(function() {
 	initTriggers();
 	initComponents();
 	
+	$.ajax({
+		url: "https://bitbucket.org/eltibouron/seriesaddictstatic/raw/afca5f7ebeb53e9a90b8a8193d529424ff8747af/CHANGELOG",
+		type: "get",
+		success: function(res) {
+			var version = $(res.responseText).children().first();
+			$("#last-version")
+				.append(version.attr('code') + " (" + version.attr('date') + ")")
+				.removeClass("loading-version");
+		}
+	});
+	
 	function initDom() {
 		var caption = $('<div>')
 			.attr('id', 'carousel-caption')
