@@ -1,18 +1,18 @@
 $(function() {
 	$.ajax({
-		url: "https://bitbucket.org/eltibouron/seriesaddictstatic/raw/afca5f7ebeb53e9a90b8a8193d529424ff8747af/CHANGELOG",
+		url: "https://api.bitbucket.org/1.0/repositories/eltibouron/seriesaddictstatic/raw/default/CHANGELOG",
 		type: "get",
 		success: function(res) {
 			if (res.responseText.length > 0) {
 				var html = [];
-				$.each($(res.responseText).children(), function(i, versionNode) {
+				var xml = $.parseXML(res.responseText);
+				$.each($(xml).find('changelog').children(), function(i, versionNode) {
 					var version = $(versionNode);
 					html.push("<h3>Version " + version.attr('code') + " (" + version.attr('date') + ")</h3>");
 					
 					if (version.children().size() > 0) {
 						html.push("<ul>");
 						$.each(version.children(), function (j, changeNode) {
-							var text = null;
 							var className = null;
 							var prefix = null;
 							var isPremium = false;
@@ -39,7 +39,7 @@ $(function() {
 									? '<span class="label' + className + '">' + prefix + '</span> ' + (isPremium ? '<span class="label label-inverse">Fonctionnalité premium</span> ' : '')
 									: ""
 								) +
-								change.html() + 
+								change.text() + 
 								'</li>'
 							);
 						});
@@ -50,10 +50,10 @@ $(function() {
 			} else {
 				$('#changelog .container').html("<h3>Impossible de récupérer le changelog. Veuillez recharger s'il vous plait.</h3>");
 			}
-			$('#changelog .container').removeClass('loading-changelog');
+			$('#changelog .container').removeClass('loading-page');
 		},
 		error: function(xhr, status, error) {
-			$('#changelog .container').html("<h3>Impossible de récupérer le changelog. Veuillez recharger s'il vous plait.</h3>").removeClass('loading-changelog');
+			$('#changelog .container').html("<h3>Impossible de récupérer le changelog. Veuillez recharger s'il vous plait.</h3>").removeClass('loading-page');
 		}
 	});
 });

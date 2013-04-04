@@ -4,7 +4,7 @@ $(function() {
 	initComponents();
 	
 	$.ajax({
-		url: "https://bitbucket.org/eltibouron/seriesaddictstatic/raw/afca5f7ebeb53e9a90b8a8193d529424ff8747af/CHANGELOG",
+		url: "https://api.bitbucket.org/1.0/repositories/eltibouron/seriesaddictstatic/raw/default/CHANGELOG",
 		type: "get",
 		success: function(res) {
 			if (res.responseText.length > 0) {

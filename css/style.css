@@ -65,8 +65,8 @@ h2.section span {
 	text-align: justify;
 }
 
-.loading-changelog {
-	background-image: url(../img/loader-changelog.gif);
+.loading-page {
+	background-image: url(../img/loader-page.gif);
 	background-position: center;
 	background-repeat: no-repeat;
 	min-height: 300px;
