@@ -7,10 +7,16 @@ $(function() {
 		url: "https://bitbucket.org/eltibouron/seriesaddictstatic/raw/afca5f7ebeb53e9a90b8a8193d529424ff8747af/CHANGELOG",
 		type: "get",
 		success: function(res) {
-			var version = $(res.responseText).children().first();
-			$("#last-version")
-				.append(version.attr('code') + " (" + version.attr('date') + ")")
-				.removeClass("loading-version");
+			if (res.responseText.length > 0) {
+				var version = $(res.responseText).children().first();
+				$("#last-version").append(version.attr('code') + " (" + version.attr('date') + ")");
+			} else {
+				$("#last-version").append("Inconnue")
+			}
+			$("#last-version").removeClass("loading-version");
+		},
+		error: function(xhr, status, error) {
+			$("#last-version").append("Inconnue").removeClass("loading-version");
 		}
 	});
 	
