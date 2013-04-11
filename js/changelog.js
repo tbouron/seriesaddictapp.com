@@ -1,4 +1,20 @@
 $(function() {
+	$.fn.addAnchor = function(title) {
+		title = title || _("Lien");
+		return this.filter("*[id]").each(function() {
+			$("<a class='anchor'> \u00B6</a>").attr("href", "#" + this.id)
+				.attr("title", title).appendTo(this);
+			$(this).hover(
+				function () {
+					$(this).find("a.anchor").show();
+				},
+				function () {
+					$(this).find("a.anchor").hide();
+				}
+			);
+		});
+	};
+	
 	$.ajax({
 		url: "https://api.bitbucket.org/1.0/repositories/eltibouron/seriesaddictstatic/raw/default/CHANGELOG",
 		type: "get",
@@ -8,7 +24,19 @@ $(function() {
 				var xml = $.parseXML(res.responseText);
 				$.each($(xml).find('changelog').children(), function(i, versionNode) {
 					var version = $(versionNode);
-					html.push("<h3>Version " + version.attr('code') + " (" + version.attr('date') + ")</h3>");
+					var code = version.attr('code');
+					var date = version.attr('date');
+					var hash = "v" + code.replace(/\./g, "_");
+					
+					html.push(
+						"<h3 id=\"" +
+						hash +
+						"\">Version " +
+						code +
+						" (" +
+						date +
+						")</h3>"
+					);
 					
 					if (version.children().size() > 0) {
 						html.push("<ul>");
@@ -47,6 +75,13 @@ $(function() {
 					}
 				});
 				$('#changelog .container').html(html.join("\n"));
+				$('#changelog .container').find("h3").addAnchor("Lien vers cette version");
+				
+				var hash = document.location.hash;
+				if (hash != undefined && hash.length > 0) {
+					var top = $(hash).offset().top - 60;
+					$('html, body').animate({ scrollTop: top }, 700);
+				}
 			} else {
 				$('#changelog .container').html("<h3>Impossible de récupérer le changelog. Veuillez recharger s'il vous plait.</h3>");
 			}
