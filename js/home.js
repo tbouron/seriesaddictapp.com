@@ -113,7 +113,7 @@ $(function() {
 		carouselSlideIn();
 		
 		// Tooltips
-		$('[rel=tooltip]').tooltip();
+		$('.link-tooltip').tooltip();
 		
 		// Init articles fade toggle
 		setTimeout(function() {
