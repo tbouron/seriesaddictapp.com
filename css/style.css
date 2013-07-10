@@ -193,6 +193,59 @@ h2.section span {
 }
 
 /* --------------------------------------------- */
+/* Articles */
+#articles blockquote {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+#articles blockquote:before {
+	content: '\201C';
+	font-size: 3em;
+	font-family: 'Times New Roman';
+	padding-right: 0.2em;
+	color: #669900;
+} 
+#articles blockquote:after {
+	content: '\201D';
+	font-size: 3em;
+	font-family: 'Times New Roman';
+	padding-right: 0.2em;
+	color: #669900;
+}
+#articles blockquote span {
+	position: relative;
+	top: -1em;
+	font-size: 0.9em;
+}
+#articles cite {
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #669900;
+}
+#articles .thumbnail {
+	height: 250px;
+	background-color: #ffffff;
+	position: relative;
+}
+#articles .text, #articles .picture {
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10%;
+}
+#articles img {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* --------------------------------------------- */
 /* FAQ & Changelog */
 #faq, #changelog {
 	padding-top: 100px;

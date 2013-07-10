@@ -54,6 +54,15 @@ $(function() {
 		} else {
 			triggerSmallWidth();
 		}
+		
+		$('#articles li').css('cursor', 'pointer');
+		$('#articles li').each(function(index) {
+			if (index%2 == 0 && $(this).find('div.picture').size() > 0) {
+				$(this).find('div.text').hide();
+			} else {
+				$(this).find('div.picture').hide();
+			}
+		});
 	}
 	
 	function initTriggers() {
@@ -79,6 +88,11 @@ $(function() {
 			$("html, body").animate({ scrollTop: 0 }, 700);
 			return false;
 		});
+		
+		// Article links
+		$('#articles li').click(function(e) {
+			window.location.href = $(this).find('a').attr('href');
+		});
 	}
 	
 	function initComponents() {
@@ -100,6 +114,11 @@ $(function() {
 		
 		// Tooltips
 		$('[rel=tooltip]').tooltip();
+		
+		// Init articles fade toggle
+		setTimeout(function() {
+			articlesFadeToggle(-1);
+		}, 4000);
 	}
 	
 	function triggerSmallWidth() {
@@ -125,6 +144,24 @@ $(function() {
 		$('#carousel-caption h3').html($('#device-carousel div.active img').attr('alt'));
 		$('#carousel-caption p').html($('#device-carousel div.active p').html());
 		$('#carousel-caption h3, #carousel-caption p').fadeIn();
+	}
+	
+	function articlesFadeToggle(lastId) {
+		var nb = $('#articles li').size();
+		var i = Math.floor((Math.random() * nb));
+		var elm = $('#articles li').get(i);
+		
+		while (lastId == i || $(elm).find('div.picture').size() == 0) {
+			i = Math.floor((Math.random() * nb));
+			elm = $('#articles li').get(i);
+		}
+		
+		$(elm).find('div.text').fadeToggle();
+		$(elm).find('div.picture').fadeToggle();
+		
+		setTimeout(function() {
+			articlesFadeToggle(i);
+		}, 4000);
 	}
 });
 
